@@ -1,0 +1,54 @@
+﻿@{
+ViewData["Title"] = "Form";
+}
+
+@model Student
+
+<form method="post" class="d-grid" asp-action="Index" asp-controller="Home">
+  <div class="border p-3 mt-4">
+    <div class="row pb-2">
+      <h2 class="text-primary">Enter Student Data</h2>
+    </div>
+  </div>
+  <!-- Result of form validation appear here -->
+  <div asp-validation-summary="All"></div>
+
+  <div class="mb-3 row p-1">
+    <label asp-for="FirstName" class="p-0">First Name</label>
+    <input asp-for="FirstName" class="form-control" />
+    <span asp-validation-for="FirstName" class="text-danger"></span>
+  </div>
+
+  <div class="mb-3 row p-1">
+    <label asp-for="LastName" class="p-0">Last Name</label>
+    <input asp-for="LastName" class="form-control" />
+    <span asp-validation-for="LastName" class="text-danger"></span>
+  </div>
+
+  <div class="mb-3 row p-1">
+    <label asp-for="Sex" class="p-0">Gender</label>
+    <select asp-for="Sex" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+      <option selected disabled>Select your gender</option>
+    </select>
+    <span asp-validation-for="Sex" class="text-danger"></span>
+  </div>
+
+  <div class="mb-3 row p-1">
+    <label asp-for="DateOfBirth" class="p-0">Date of Birth</label>
+    <input asp-for="DateOfBirth" class="form-control" />
+    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+  </div>
+
+
+  <div class="mb-3 row p-1">
+    <label asp-for="Address" class="p-0">Address</label>
+    <input asp-for="Address" class="form-control" />
+    <span asp-validation-for="Address" class="text-danger"></span>
+  </div>
+
+  <div class="row justify-content-between">
+    <input type="submit" value="Register" class="col-5 btn btn-outline-primary">
+    <input type="reset" value="Reset" class="col-5 btn btn-outline-secondary">
+  </div>
+
+</form>
