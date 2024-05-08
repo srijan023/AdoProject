@@ -32,7 +32,7 @@ public class HomeController : Controller
     }
 
     [HttpGet]
-    public IActionResult Data()
+    public IActionResult Table()
     {
         List<Student> students = new List<Student>();
         StudentDBAccess dbAccess = new StudentDBAccess();
@@ -45,7 +45,7 @@ public class HomeController : Controller
     public IActionResult Delete(int id){
       StudentDBAccess dbAccess = new StudentDBAccess();
       dbAccess.DeleteStudentData(id);
-      return RedirectToAction("Data");
+      return RedirectToAction("Table");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

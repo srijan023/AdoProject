@@ -4,50 +4,67 @@ ViewData["Title"] = "Form";
 
 @model Student
 
-<form method="post" class="d-grid" asp-action="Index" asp-controller="Home">
-  <div class="border p-3 mt-4">
+<form method="post" class="" asp-action="Index" asp-controller="Home">
+  <div class="text-center p-3 mt-4">
     <div class="row pb-2">
-      <h2 class="text-primary">Enter Student Data</h2>
+      <h2 class="text-primary display-3 text-info">Enter Student Data</h2>
     </div>
   </div>
   <!-- Result of form validation appear here -->
   <div asp-validation-summary="All"></div>
 
-  <div class="mb-3 row p-1">
-    <label asp-for="FirstName" class="p-0">First Name</label>
-    <input asp-for="FirstName" class="form-control" />
-    <span asp-validation-for="FirstName" class="text-danger"></span>
+  <div class="row mb-3">
+
+    <div class="col-6 form-group row">
+      <label asp-for="FirstName" class="col-sm-4 col-form-label">First Name</label>
+      <div class="col-sm-8">
+        <input asp-for="FirstName" class="form-control" />
+      </div>
+      <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group col-6 row">
+      <label asp-for="LastName" class="col-sm-4 col-form-label">Last Name</label>
+      <div class="col-sm-8">
+        <input asp-for="LastName" class="form-control" />
+      </div>
+      <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
   </div>
 
-  <div class="mb-3 row p-1">
-    <label asp-for="LastName" class="p-0">Last Name</label>
-    <input asp-for="LastName" class="form-control" />
-    <span asp-validation-for="LastName" class="text-danger"></span>
+  <div class="row mb-3">
+    <div class="form-group col-6 row ">
+      <label asp-for="Sex" class=" col-sm-4 col-form-label">Gender</label>
+      <div class="col-sm-8">
+        <select asp-for="Sex" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+          <option selected disabled>Select your gender</option>
+        </select>
+      </div>
+      <span asp-validation-for="Sex" class="text-danger"></span>
+    </div>
+
+    <div class="form-group row col-6">
+      <label asp-for="DateOfBirth" class="col-sm-4 col-form-label ">Date of Birth</label>
+      <div class="col-sm-8">
+        <input asp-for="DateOfBirth" class="form-control" />
+      </div>
+      <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+    </div>
   </div>
 
-  <div class="mb-3 row p-1">
-    <label asp-for="Sex" class="p-0">Gender</label>
-    <select asp-for="Sex" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
-      <option selected disabled>Select your gender</option>
-    </select>
-    <span asp-validation-for="Sex" class="text-danger"></span>
+  <div class="row mb-3">
+    <div class="col-6 form-group row">
+      <label asp-for="Address" class="col-sm-4 col-form-label">Address</label>
+      <div class="col-sm-8">
+        <input asp-for="Address" class="form-control" />
+      </div>
+      <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+
   </div>
-
-  <div class="mb-3 row p-1">
-    <label asp-for="DateOfBirth" class="p-0">Date of Birth</label>
-    <input asp-for="DateOfBirth" class="form-control" />
-    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
-  </div>
-
-
-  <div class="mb-3 row p-1">
-    <label asp-for="Address" class="p-0">Address</label>
-    <input asp-for="Address" class="form-control" />
-    <span asp-validation-for="Address" class="text-danger"></span>
-  </div>
-
   <div class="row justify-content-between">
-    <input type="submit" value="Register" class="col-5 btn btn-outline-primary">
+    <input type="submit" value="Register" class="col-5 btn btn-outline-info">
     <input type="reset" value="Reset" class="col-5 btn btn-outline-secondary">
   </div>
 

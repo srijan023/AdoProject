@@ -18,12 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/creatio/Srijan/Programming/college/dotnet/adoProject
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/creatio/Srijan/Programming/college/dotnet/adoProject/Views/Home/Data.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EYXRhLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/home/creatio/Srijan/Programming/college/dotnet/adoProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/creatio/Srijan/Programming/college/dotnet/adoProject/Views/Home/Table.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9UYWJsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/creatio/Srijan/Programming/college/dotnet/adoProject/Views/Shared/Error.cshtml]
